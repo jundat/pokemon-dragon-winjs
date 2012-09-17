@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Game</title>
+
+    <!-- WinJS references -->
+    <link rel="stylesheet" href="//Microsoft.WinJS.1.0/css/ui-dark.css" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- App references -->
+    <link rel="stylesheet" href="/css/default.css" />
+
+    <script src="/js/global.js"></script>
+    
+    <script src="/objects/engine.js"></script>
+    <script src="/objects/board.js"></script>
+    
+    <script src="/js/assetManager.js"></script>
+    <script src="/js/movingAverage.js"></script>
+    <script src="/js/frameTimer.js"></script>
+    <script src="/js/touchPanel.js"></script>
+    <script src="/js/scores.js"></script>
+    <script src="/js/gameState.js"></script>
+    <script src="/js/game.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="/js/default.js"></script>
+
+    <script src="/js/homePage.js"></script>
+    <script src="/js/scoresPage.js"></script>
+    <script src="/js/gamePage.js"></script>
+</head>
+<body>
+    <!-- Fragment host -->
+    <div id="contentHost" data-win-control="GameManager.PageControlNavigator" data-win-options="{home: '/html/homePage.html'}"></div>
+
+    <!-- App bar -->
+    <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'home', label:'Menu', icon:'&#xE10F;', section: 'global', onclick: GameManager.navigateHome}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'scores', label:'Scores', icon:'&#xE113;', section: 'global', onclick: GameManager.navigateScores}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'newgame', label:'New', icon:'&#xE10E;', section: 'selection', onclick: GameManager.newGame}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'pause', label:'Pause', icon:'&#xE103;', section: 'selection', onclick: GameManager.togglePause}"></button>
+
+    </div>
+
+</body>
+</html>
