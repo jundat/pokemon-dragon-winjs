@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Settings Flyout</title>
+
+    <!-- WinJS references -->
+    <link rel="stylesheet" href="//Microsoft.WinJS.1.0/css/ui-dark.css" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <link rel="stylesheet" href="/css/default.css">
+</head>
+<body>
+    <!-- Settings charm content -->
+    <div class="settingsDiv" id="settingsDiv" data-win-control="WinJS.UI.SettingsFlyout" data-win-options="{width:'narrow'}">
+        <div class="win-label">
+            <button type="button" onclick="GameManager.showPreferences()" class="win-backbutton"></button>
+            <span id="settingsTitle">Game options</span>
+        </div>
+        <div class="win-content">
+            <div class="settingLabel">Player name</div>
+
+            <label>Players</label><br />
+            <input type="text" id="settingPlayerName" style="width: 150px;" value="Player" maxlength="10" onchange="GameManager.game.setSettings()"/> 
+            <br />
+
+            <div class="settingLabel">Sound volume</div>
+            <label>Sound Volume</label><br />
+            <input type="range" id="settingSoundVolume" min="0" max="100" value="100" style="width: 260px;" onchange="GameManager.game.setSettings()" />
+            <br/>
+            <!--
+            <div class="settingLabel">Level</div>
+            <input type="range" id="settingLevel" min="1" max="10" value="1" style="width: 260px;" onchange="GameManager.game.setSettings()" />
+            -->
+            <br/>
+            
+        </div>
+    </div>
+</body>
+</html>

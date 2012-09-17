@@ -1,0 +1,23 @@
+﻿label {
+    font-family:Constantia;
+    font-size: larger;
+}
+
+p {
+    font-family: Constantia;
+    font-size: large;
+}
+
+a {
+    font-family: Constantia;
+    font-size: large;
+    font-style: italic;
+    color: #0026ff;
+}
+
+h5 {
+    font-family: Constantia;
+    font-style: italic;
+    color:#6c0505;
+    font-size: larger;
+}

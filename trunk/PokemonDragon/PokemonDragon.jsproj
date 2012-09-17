@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>6e25b6ab-49ba-471d-ae7f-c81e4d100d5c</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <PackageCertificateKeyFile>PokemonDragon_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="css\default.css" />
+    <Content Include="css\gamePage.css" />
+    <Content Include="css\homePage.css" />
+    <Content Include="css\scoresPage.css" />
+    <Content Include="css\settingBar.css" />
+    <Content Include="default.html" />
+    <Content Include="html\gamePage.html" />
+    <Content Include="html\homePage.html" />
+    <Content Include="html\scoresPage.html" />
+    <Content Include="html\settingAboutUs.html" />
+    <Content Include="html\settingsFlyout.html" />
+    <Content Include="images\imgDialog.png" />
+    <Content Include="images\imgFrame.png" />
+    <Content Include="images\logoGameUIT.jpg" />
+    <Content Include="images\imgBgGame.png" />
+    <Content Include="images\imgBgMenu.png" />
+    <Content Include="images\imgBgScores.png" />
+    <Content Include="images\imgBgSnap.png" />
+    <Content Include="images\imgButtonResume.png" />
+    <Content Include="images\imgButtonResumeOver.png" />
+    <Content Include="images\imgFrameSelect.png" />
+    <Content Include="images\imgPlayButton.png" />
+    <Content Include="images\imgPlayButtonOver.png" />
+    <Content Include="images\imgTime.png" />
+    <Content Include="images\logoECT.png" />
+    <Content Include="js\assetManager.js" />
+    <Content Include="js\default.js" />
+    <Content Include="js\frameTimer.js" />
+    <Content Include="js\game.js" />
+    <Content Include="js\gamePage.js" />
+    <Content Include="js\gameState.js" />
+    <Content Include="js\global.js" />
+    <Content Include="js\homePage.js" />
+    <Content Include="js\movingAverage.js" />
+    <Content Include="js\navigator.js" />
+    <Content Include="js\scores.js" />
+    <Content Include="js\scoresPage.js" />
+    <Content Include="js\touchPanel.js" />
+    <Content Include="Logo.png" />
+    <Content Include="logoECT.png" />
+    <Content Include="objects\board.js" />
+    <Content Include="objects\engine.js" />
+    <Content Include="SmallLogo.png" />
+    <Content Include="sounds\sndBackground.mp3" />
+    <Content Include="sounds\sndBg.mid" />
+    <Content Include="sounds\sndBounce.wav" />
+    <Content Include="sounds\sndCheckVolume.wav" />
+    <Content Include="sounds\sndWin.wav" />
+    <Content Include="SplashScreen.png" />
+    <Content Include="sprites\0.png" />
+    <Content Include="sprites\1.png" />
+    <Content Include="sprites\10.png" />
+    <Content Include="sprites\11.png" />
+    <Content Include="sprites\12.png" />
+    <Content Include="sprites\13.png" />
+    <Content Include="sprites\14.png" />
+    <Content Include="sprites\15.png" />
+    <Content Include="sprites\16.png" />
+    <Content Include="sprites\17.png" />
+    <Content Include="sprites\18.png" />
+    <Content Include="sprites\19.png" />
+    <Content Include="sprites\2.png" />
+    <Content Include="sprites\20.png" />
+    <Content Include="sprites\21.png" />
+    <Content Include="sprites\22.png" />
+    <Content Include="sprites\23.png" />
+    <Content Include="sprites\24.png" />
+    <Content Include="sprites\25.png" />
+    <Content Include="sprites\26.png" />
+    <Content Include="sprites\27.png" />
+    <Content Include="sprites\28.png" />
+    <Content Include="sprites\29.png" />
+    <Content Include="sprites\3.png" />
+    <Content Include="sprites\30.png" />
+    <Content Include="sprites\31.png" />
+    <Content Include="sprites\32.png" />
+    <Content Include="sprites\33.png" />
+    <Content Include="sprites\34.png" />
+    <Content Include="sprites\35.png" />
+    <Content Include="sprites\36.png" />
+    <Content Include="sprites\37.png" />
+    <Content Include="sprites\38.png" />
+    <Content Include="sprites\39.png" />
+    <Content Include="sprites\4.png" />
+    <Content Include="sprites\40.png" />
+    <Content Include="sprites\41.png" />
+    <Content Include="sprites\5.png" />
+    <Content Include="sprites\6.png" />
+    <Content Include="sprites\7.png" />
+    <Content Include="sprites\8.png" />
+    <Content Include="sprites\9.png" />
+    <Content Include="StoreLogo.png" />
+    <Content Include="WideLogo.png" />
+    <None Include="PokemonDragon_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <!-- To modify your build process, add your task inside one of the targets below then uncomment
+       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  -->
+</Project>

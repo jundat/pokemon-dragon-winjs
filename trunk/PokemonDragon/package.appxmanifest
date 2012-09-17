@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="PokemonDragon" Version="1.0.0.4" Publisher="CN=JundatPham" />
+  <Properties>
+    <DisplayName>PokemonDragon</DisplayName>
+    <PublisherDisplayName>JundatPham</PublisherDisplayName>
+    <Logo>StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="PokemonDragon" Logo="Logo.png" SmallLogo="SmallLogo.png" Description="PokemonDragon" ForegroundText="dark" BackgroundColor="#ecd6a3" ToastCapable="false">
+        <DefaultTile WideLogo="WideLogo.png" />
+        <SplashScreen Image="SplashScreen.png" BackgroundColor="#ecd6a3" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
