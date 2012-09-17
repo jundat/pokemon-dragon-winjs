@@ -134,7 +134,7 @@ var Game = WinJS.Class.define(
 
     // reset board, time, timeLimit
     nextGame: function (nextLevel) {
-        GMessage("LEVEL " + nextLevel, "");
+        GMessage("LEVEL " + nextLevel, "", function () { GameManager.game.unpause(); });
 
         this.board.Initialize();
         this.level = nextLevel;
@@ -142,6 +142,11 @@ var Game = WinJS.Class.define(
         this.getTimeLimit();// reset counter
         this.timeLimit = this.getTimeLimit(this.level);
         this.state.gamePaused = false;
+        this.state.gamePhase = "started";
+
+        this.saveState();
+        
+        this.pause();
     },
 
     // Called when the game is being prepared to start
@@ -256,6 +261,8 @@ var Game = WinJS.Class.define(
         if (GameManager.state.internal.gamePhase == "lose") {
             if (buttonResume.contain(e.x, e.y)) {
                 this.retry();
+            } else {
+                return;
             }
         }
         
@@ -372,7 +379,7 @@ var Game = WinJS.Class.define(
         // TODO: Update to match any changes in settings panel
         settingPlayerName.value = this.settings.playerName;
         settingSoundVolume.value = this.settings.soundVolume;
-        //settingLevel.value = this.level;
+        settingLevel.value = this.level;
     },
 
     // Called when changes are made on the settings panel
@@ -381,20 +388,23 @@ var Game = WinJS.Class.define(
         // TODO: Update to match any changes in settings panel
         this.settings.playerName = settingPlayerName.value;
 
+        if (this.level != settingLevel.value) {
+
+            this.level = settingLevel.value;
+            this.nextGame(this.level);
+        }
+        
+        this.stateHelper.save("external");
+    },
+
+    settingVolume: function () {
+        // volume
         if (this.settings.soundVolume != settingSoundVolume.value) {
             this.settings.soundVolume = settingSoundVolume.value;
             GPlaySound(GameManager.assetManager.assets.sndCheckVolume, true);
             GameManager.assetManager.setVolume();
+            this.stateHelper.save("external");
         }
-
-        //if (this.level != settingLevel.value) {
-        //    this.level = settingLevel.value;
-        //    this.nextGame(this.level);
-        //    this.saveState();
-        //    this.stateHelper.save("internal");
-        //}
-        
-        this.stateHelper.save("external");
     },
 
     // Called when the app is suspended

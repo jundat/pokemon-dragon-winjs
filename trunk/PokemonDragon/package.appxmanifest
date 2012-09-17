@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="PokemonDragon" Version="1.0.0.4" Publisher="CN=JundatPham" />
+  <Identity Name="PokemonDragon" Version="1.0.0.6" Publisher="CN=JundatPham" />
   <Properties>
     <DisplayName>PokemonDragon</DisplayName>
     <PublisherDisplayName>JundatPham</PublisherDisplayName>
