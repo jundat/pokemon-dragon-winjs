@@ -22,17 +22,19 @@
             <div class="settingLabel">Player name</div>
 
             <label>Players</label><br />
-            <input type="text" id="settingPlayerName" style="width: 150px;" value="Player" maxlength="10" onchange="GameManager.game.setSettings()"/> 
+            <input type="text" id="settingPlayerName" style="width: 150px;" value="Player" maxlength="10" /> 
             <br />
 
-            <div class="settingLabel">Sound volume</div>
             <label>Sound Volume</label><br />
-            <input type="range" id="settingSoundVolume" min="0" max="100" value="100" style="width: 260px;" onchange="GameManager.game.setSettings()" />
+            <input type="range" id="settingSoundVolume" min="0" max="100" value="100" style="width: 260px;"  onchange="GameManager.game.settingVolume()" />
             <br/>
-            <!--
-            <div class="settingLabel">Level</div>
-            <input type="range" id="settingLevel" min="1" max="10" value="1" style="width: 260px;" onchange="GameManager.game.setSettings()" />
-            -->
+            
+            <label>Level</label><br />
+            <input type="range" id="settingLevel" min="1" max="10" value="1" style="width: 260px;" />
+            <br />
+
+            <button value="Update" onclick="GameManager.game.setSettings()">Save</button>
+            
             <br/>
             
         </div>

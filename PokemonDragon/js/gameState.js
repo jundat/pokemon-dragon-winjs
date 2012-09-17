@@ -14,7 +14,7 @@ var GameState = WinJS.Class.define(
 
     external: {
         playerName: "Jundat",
-        soundVolume: 100,
+        soundVolume: 60, // 0 -> 100
     },
 
     internal: {
